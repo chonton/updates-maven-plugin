@@ -53,7 +53,7 @@
 
     <site>
       <id>github</id>
-      <url>https://chonton.github.com/exists-maven-plugin/${project.version}</url>
+      <url>https://chonton.github.com/updates-maven-plugin/${project.version}</url>
     </site>
 
   </distributionManagement>
@@ -138,7 +138,7 @@
             <path>${project.version}</path>
             <merge>true</merge>
             <server>github</server>
-            <repositoryName>exists-maven-plugin</repositoryName>
+            <repositoryName>${project.artifactId}</repositoryName>
             <repositoryOwner>chonton</repositoryOwner>
           </configuration>
         </plugin>
@@ -254,19 +254,6 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>org.honton.chas</groupId>
-        <artifactId>updates-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>report</id>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
     </plugins>
   </build>
 
@@ -318,6 +305,21 @@
       <id>gh-pages</id>
       <build>
         <plugins>
+          <plugin>
+            <groupId>org.honton.chas</groupId>
+            <artifactId>updates-maven-plugin</artifactId>
+            <version>${project.version}</version>
+            <executions>
+              <execution>
+                <id>report</id>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+                <phase>pre-site</phase>
+              </execution>
+            </executions>
+          </plugin>
+
           <!-- push stage to github gh-pages -->
           <plugin>
             <groupId>com.github.github</groupId>

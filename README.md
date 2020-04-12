@@ -1,4 +1,4 @@
-# exists-maven-plugin
+# updates-maven-plugin
 
 Report which dependencies of a project have updates.  This plugin provides a similar report to the 
 [versions updates-report](https://www.mojohaus.org/versions-maven-plugin/dependency-updates-report-mojo.html).
@@ -6,10 +6,11 @@ This plugin provides simpler configuration to eliminate non-production updates i
 plugin will only produce an xml report of updates for the declared dependencies in a project.
 
 ## Goals
-There is a single goal.  [report](https://chonton.github.io/updates-maven-plugin/0.1.0/report.html)
-generates an xml report of the updates available for each dependency. 
+There is a single goal.  [report](https://chonton.github.io/updates-maven-plugin/0.1.0/report-mojo.html)
+generates an [xml report](https://chonton.github.io/updates-maven-plugin/0.1.0/dependency-updates-report.xml)
+of the updates available for each dependency. 
 
-Mojo details at [plugin info](https://chonton.github.io/updates-maven-plugin/0.1.0/plugin-info.html)
+Mojo details at [plugin info](https://chonton.github.io/updates-maven-plugin/0.1.0/)
 
 ## Parameters
 | Parameter | Property | Default | Description |
