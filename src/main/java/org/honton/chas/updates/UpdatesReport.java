@@ -90,6 +90,13 @@ public class UpdatesReport extends AbstractMavenReport {
     return reportName;
   }
 
+  // return true to prevent maven reporting framework from generating spurious
+  // site/${reportName}.html file
+  @Override
+  public boolean isExternalReport() {
+    return true;
+  }
+
   @Override
   protected void executeReport(Locale locale) throws MavenReportException {
     if (!skip) {

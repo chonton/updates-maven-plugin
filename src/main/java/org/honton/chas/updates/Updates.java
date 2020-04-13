@@ -41,7 +41,9 @@ public class Updates {
     return false;
   }
 
-  /** Get the current version of the dependent artifact */
+  /** Get the current version of the dependent artifact
+   * @return The current version
+   */
   public ArtifactVersion getCurrentVersion() {
     return current;
   }

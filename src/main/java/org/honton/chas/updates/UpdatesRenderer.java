@@ -141,7 +141,7 @@ public class UpdatesRenderer {
    * Makes report file with given name in target directory.
    *
    * @throws MavenReportException if something went wrong
-   * @param encoding
+   * @param encoding The report encoding
    */
   public void render(String encoding) throws MavenReportException {
     startElement(TabStops.ZERO, "DependencyUpdatesReport");
