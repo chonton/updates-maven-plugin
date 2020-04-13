@@ -1,6 +1,6 @@
 # updates-maven-plugin
 
-Report which dependencies of a project have updates.  This plugin provides a similar report to the 
+Report of which dependencies of a project have updates.  This plugin provides a similar report to the 
 [versions updates-report](https://www.mojohaus.org/versions-maven-plugin/dependency-updates-report-mojo.html).
 This plugin provides simpler configuration to eliminate non-production updates in the report.  This
 plugin will only produce an xml report of updates for the declared dependencies in a project.
